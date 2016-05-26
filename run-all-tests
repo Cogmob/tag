@@ -1,8 +1,6 @@
 #!/bin/bash
-. .venv/bin/activate
+. .virtpy/bin/activate
 
 mkdir -p .gen
-rsync -a src .gen/src
-cd .gen/src
-nosetests --with-progressive
-cd ../..
+rsync -a src .gen/
+nosetests --with-progressive .gen/src/python
