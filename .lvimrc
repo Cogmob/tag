@@ -1,2 +1,2 @@
-let g:testcommand='clear ; ./run-all-tests'
-let g:limittestcommand='clear ; ./run-selected-tests'
+let g:testcommand='cd ~/tagger ; clear ; ./run-all-tests'
+let g:limittestcommand='cd ~/tagger ; clear ; ./run-selected-tests'

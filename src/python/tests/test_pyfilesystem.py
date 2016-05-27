@@ -1,7 +1,20 @@
 from compare import expect
+from with_setup_args import with_setup_args as s
 from nose.plugins.attrib import attr
 import unittest
 
-class TestPyfilesystem(unittest.TestCase):
-    def test_ls(self):
-        return 1
+from fs.opener import fsopendir
+
+def up():
+    app_fs = fsopendir('mount://src/python/tests/fs.ini', create_dir=True)
+    app_fs.makedir('tmp/.tagger')
+    app_fs.makedir('tmp/.filtered')
+    return [app_fs], {}
+
+def down(app_fs):
+    pass
+
+@s(up, down)
+def test_ls(app_fs):
+    files = app_fs.listdir('tmp')
+    expect(files).to_equal(['.tagger', '.filtered'])
