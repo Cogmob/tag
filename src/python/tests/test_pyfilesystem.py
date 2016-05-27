@@ -11,10 +11,7 @@ def up():
     app_fs.makedir('tmp/.filtered')
     return [app_fs], {}
 
-def down(app_fs):
-    pass
-
-@s(up, down)
+@s(up)
 def test_ls(app_fs):
     files = app_fs.listdir('tmp')
     expect(files).to_equal(['.tagger', '.filtered'])

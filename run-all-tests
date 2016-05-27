@@ -2,5 +2,6 @@
 . .virtpy/bin/activate
 
 mkdir -p .gen
-rsync -a src .gen/
+rm -rf .gen/src
+cp -r src .gen/
 nosetests --with-progressive .gen/src/python
