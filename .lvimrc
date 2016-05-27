@@ -1,0 +1,2 @@
+let g:testcommand='clear ; ./run-all-tests'
+let g:limittestcommand='clear ; ./run-selected-tests'
