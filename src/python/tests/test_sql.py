@@ -1,5 +1,5 @@
 from compare import expect
-from with_setup_args import with_setup_args as s
+from utils.with_setup_args import with_setup_args as s
 from nose.plugins.attrib import attr
 import unittest
 

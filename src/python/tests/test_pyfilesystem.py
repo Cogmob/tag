@@ -1,12 +1,12 @@
 from compare import expect
-from with_setup_args import with_setup_args as s
+from utils.with_setup_args import with_setup_args as s
 from nose.plugins.attrib import attr
 import unittest
 
 from fs.opener import fsopendir
 
 def up():
-    app_fs = fsopendir('mount://src/python/tests/fs.ini', create_dir=True)
+    app_fs = fsopendir('mount://src/python/tests/data/fs.ini', create_dir=True)
     app_fs.makedir('tmp/.tagger')
     app_fs.makedir('tmp/.filtered')
     return [app_fs], {}
