@@ -1,0 +1,11 @@
+#!/bin/bash
+. .virtpy/bin/activate
+
+mkdir -p .gen
+rm -rf .gen/src
+cp -r src .gen/
+for file in $(find .gen -name ".__init__.py")
+do
+    echo mv $file `echo $file | sed s/\\\\.__init__/__init__/` | sh
+done
+nosetests --with-progressive .gen/src/python -a 's'
