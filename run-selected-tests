@@ -1,6 +1,7 @@
 #!/bin/bash
-. .virtpy/bin/activate
+. .virtualenv/bin/activate
 
+echo 'running selected tests'
 mkdir -p .gen
 rm -rf .gen/src
 cp -r src .gen/
