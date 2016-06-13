@@ -6,7 +6,7 @@ import unittest
 from fs.opener import fsopendir
 
 def up():
-    app_fs = fsopendir('mount://src/python/tests/data/fs.ini', create_dir=True)
+    app_fs = fsopendir('mount://src/python/module_tests/data/fs.ini', create_dir=True)
     app_fs.makedir('tmp/.tagger')
     app_fs.makedir('tmp/.filtered')
     app_fs.makedir('tmp/example')
