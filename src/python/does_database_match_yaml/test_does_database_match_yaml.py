@@ -5,20 +5,25 @@ import unittest
 import os
 
 import sqlite3
-from python.initialise_database.create_database_for_tests import up, down
+from python.initialise_database.create_database_for_tests import get_database_in_memory
 from does_database_match_yaml import does_database_match_yaml
 
 @attr('s')
-@s(up, down)
-def test_does_database_match_yaml(conn, cursor):
+def test_does_database_match_yaml():
+    dirname = os.path.dirname(os.path.abspath(__file__))
     for test_name in get_test_names():
-        try:
-            expect(
-                    does_database_match_yaml(string='[]', conn=conn)
+        with open('%s/test_data/%s.yaml' % (dirname, test_name)) as yaml:
+            with open('%s/test_data/%s.sql' % (dirname, test_name)) as sql:
+                try:
+                    conn, cursor = get_database_in_memory()
+                    for inst in sql:
+                        conn.execute(inst)
+                    expect(
+                        does_database_match_yaml(string=yaml.read(), conn=conn)
                             ).to_equal(True)
-        except:
-            print test_name
-            raise
+                except:
+                    print 'test name: %s' % test_name
+                    raise
 
 def get_test_names():
     test_names = []
@@ -26,3 +31,4 @@ def get_test_names():
             "%s/test_data" % os.path.dirname(os.path.abspath(__file__))):
         if filename.endswith('.yaml'):
             test_names.append(filename[:-5])
+    return test_names

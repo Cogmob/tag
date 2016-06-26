@@ -54,7 +54,3 @@ def view_folder_contents(c):
             folderId integer references viewFolders(id),
             fileId integer references files(id),
             fileOrder integer)''')
-    c.execute('''
-        insert into viewFolderContents(folderId, fileId, fileOrder) values (10, 20, 30)''')
-    c.execute('''
-        insert into viewFolderContents(folderId, fileId, fileOrder) values (10, 20, 30)''')
