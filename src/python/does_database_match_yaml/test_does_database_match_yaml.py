@@ -8,10 +8,9 @@ import sqlite3
 from python.initialise_database.create_database_for_tests import get_database_in_memory
 from does_database_match_yaml import does_database_match_yaml
 
-@attr('s')
 def test_does_database_match_yaml():
     dirname = os.path.dirname(os.path.abspath(__file__))
-    for test_name in get_test_names():
+    for test_name in get_test_names(dirname):
         with open('%s/test_data/%s.yaml' % (dirname, test_name)) as yaml:
             with open('%s/test_data/%s.sql' % (dirname, test_name)) as sql:
                 try:
@@ -25,10 +24,9 @@ def test_does_database_match_yaml():
                     print 'test name: %s' % test_name
                     raise
 
-def get_test_names():
+def get_test_names(dirname):
     test_names = []
-    for filename in os.listdir(
-            "%s/test_data" % os.path.dirname(os.path.abspath(__file__))):
+    for filename in os.listdir("%s/test_data" % dirname):
         if filename.endswith('.yaml'):
             test_names.append(filename[:-5])
     return test_names
