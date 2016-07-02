@@ -1,2 +1,2 @@
-let g:testcommand='cd ~/tagger ; clear ; ./run-all-tests'
-let g:limittestcommand='cd ~/tagger ; clear ; ./run-selected-tests'
+nmap <leader>j :wall<CR> :call VimuxRunCommand('cd ~/tagger ; clear ; ./run-all-tests')<CR><CR>
+nmap <leader>k :wall<CR> :call VimuxRunCommand('cd ~/tagger ; clear ; ./run-selected-tests')<CR><CR>
