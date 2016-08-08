@@ -1,4 +1,34 @@
-- 1:
-- 2:
-- 3:
-- 4:
+folders:
+    folder 1:
+        folders:
+            folder 1.1:
+                folders:
+                    folder 1.1.1:
+                        files:
+                            example file 1.1.1: data
+                    folder 1.1.2:
+                        files:
+                            example file 1.1.2: data
+                files:
+                    example file 1.1: data
+        files:
+            example file 1: data
+            example file 1[1]: data
+    folder 2:
+        folders:
+            folder 2.1:
+                folders:
+                    folder 2.1.1:
+                        files:
+                            example file 2.1.1: data
+                    folder 2.1.2:
+                        files:
+                            example file 2.1.2: data
+                files:
+                    example file 2.1: data
+        files:
+            example file 2: data
+            example file 2[1]: data
+files:
+    root file 1: data
+    root file 2: data
