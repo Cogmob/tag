@@ -18,7 +18,7 @@ def up():
 @s(up)
 def test_create_files_from_yaml(app_fs):
     dirname = os.path.dirname(os.path.abspath(__file__))
-    for test_name in get_test_names(dirname):
+    for test_name in get_names(dirname):
         try:
             with open('%s/test_data/%s' % (dirname, test_name)) as f:
                 before = yaml.load(f.read())
@@ -30,5 +30,5 @@ def test_create_files_from_yaml(app_fs):
             print 'test name: %s' % test_name
             raise
 
-def get_test_names(dirname):
+def get_names(dirname):
     return [i for i in os.listdir("%s/test_data" % dirname) if i[0] is not '.']

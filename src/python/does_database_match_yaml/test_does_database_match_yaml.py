@@ -10,7 +10,7 @@ from does_database_match_yaml import does_database_match_yaml
 
 def test_does_database_match_yaml():
     dirname = os.path.dirname(os.path.abspath(__file__))
-    for test_name in get_test_names(dirname):
+    for test_name in get_names(dirname):
         with open('%s/test_data/%s.yaml' % (dirname, test_name)) as yaml:
             with open('%s/test_data/%s.sql' % (dirname, test_name)) as sql:
                 try:
@@ -24,7 +24,7 @@ def test_does_database_match_yaml():
                     print 'test name: %s' % test_name
                     raise
 
-def get_test_names(dirname):
+def get_names(dirname):
     test_names = []
     for filename in os.listdir("%s/test_data" % dirname):
         if filename.endswith('.yaml'):
