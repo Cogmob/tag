@@ -1,13 +1,13 @@
 import yaml
 
 def does_database_match_yaml(conn, string):
-    match = get_match(conn, string)
+    does_match = get_does_match(conn, string)
     table_names = get_table_names()
     if not tables_exist(table_names, conn):
         return False
 
     for table_name in table_names:
-        if not match(table_name):
+        if not does_match(table_name):
             return False
     return True
 
@@ -19,12 +19,12 @@ def tables_exist(table_names, conn):
             return False
     return True
 
-def get_match(conn, string):
+def get_does_match(conn, string):
     y = yaml.load(string)
-    def match(table_name):
+    def does_match(table_name):
         res = conn.execute('select * from %s' % table_name).fetchall()
         return check_equal(y[table_name], res)
-    return match
+    return does_match
 
 def check_equal(a, b):
     return check_equal_a(a, b) and check_equal_a(b, a)
