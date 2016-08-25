@@ -14,25 +14,29 @@ shared
 # page oriented perspective
 
 header_image
-pages_tag_group
+tag
 page_1
 	html
-	logo_image
-    \_bin
-        logo_image
+    images
+		logo
+		header
+		\_bin
+			logo_image
 page_2
 	html
-	logo_image
-    \_bin
-        logo_image
+    images
+        logo
+        header
+        \_bin
+            logo_image
 
 # type oriented perspective
 
-types_tag_group
+tag
 html
     page_1
     page_2
-images
+image
     page_1_logo
     page_2_logo
     header_image
@@ -40,3 +44,38 @@ images
         page_1_logo
         page_2_logo
         header_image
+
+# page 1 logo image tag header
+
+page_1 logo image
+red
+__
+bin
+
+# page oriented root tag file
+
+tags = \root
+child_tag_groups = \pages
+
+pages = make_tag_group do
+    name: \pages
+    tags:
+        \page_1
+        \page_2
+
+pages.init_child = ->
+    child_tags = \image
+
+# type oriented perspective root tag file
+
+tags = \root
+child_tag_groups = \types
+
+types = make_tag_group do
+    name: \types
+    tags:
+        \html
+        \image
+
+types.init_child = ->
+    child_tags = \image
