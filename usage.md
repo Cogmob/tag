@@ -1,8 +1,8 @@
 #example file system
 
-*Build*
+Build
    Effects
-      Generated
+      Generated
          Alpha_Additive_Unlit_FresnelMulColour_UVScroll.fx
          Alpha_Additive_Unlit_FresnelMulColour_UVScroll.fxd
          Alpha_Additive_Unlit_FresnelMulColour_UVScroll.Win64.opt
@@ -14,11 +14,11 @@
       FragmentCompiler.effects
       FragmentCompiler.log
       GlobalInclude.fx
-Source
+Source
    Lib
-      Rock
-         \_Initialise.cpp
-         \_Initialise.h
-         \_Rock.cpp
+      Rock
+         _Initialise.cpp
+         _Initialise.h
+         _Rock.cpp
          Jamfile.jam
 
