@@ -1,2 +1,2 @@
-nmap <leader>j :wall<CR> :call VimuxRunCommand('cd ~/tag ; clear ; ./run-all-tests')<CR><CR>
-nmap <leader>k :wall<CR> :call VimuxRunCommand('cd ~/tag ; clear ; ./run-selected-tests')<CR><CR>
+nmap <leader>j :wall<CR> :call VimuxRunCommand('cd ~/tag ; clear ; ./tools/run-all-tests')<CR><CR>
+nmap <leader>k :wall<CR> :call VimuxRunCommand('cd ~/tag ; clear ; ./tools/run-selected-tests')<CR><CR>
