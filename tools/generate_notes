@@ -1,0 +1,2 @@
+#!/bin/bash
+tools/.virtualenv/bin/python tools/generate_notes.py
