@@ -13,5 +13,5 @@ print ''
 print ''
 print ''
 
-for filename in glob.iglog('src/notes/**', recursive=True):
+for filename in glob.iglob('src/notes/**', recursive=True):
     print(filename)

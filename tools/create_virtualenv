@@ -1,5 +1,5 @@
 #!/bin/bash
-virtualenv tools/.virtualenv
+virtualenv --python=/usr/bin/python3 tools/.virtualenv
 source tools/activate
 pip install -r tools/requirements.txt
 deactivate
