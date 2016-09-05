@@ -1,4 +1,4 @@
 # installation
 
-cd ~/tag
+cd ~/tag  
 ./tools/create_virtualenv
