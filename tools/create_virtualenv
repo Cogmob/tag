@@ -1,0 +1,5 @@
+#!/bin/bash
+virtualenv tools/.virtualenv
+source tools/activate
+pip install -r tools/requirements.txt
+deactivate
