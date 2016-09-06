@@ -1,17 +1,19 @@
-import glob
-import sys
+import os
+import fnmatch
 
-print(sys.version)
+def main():
+    matches = []
+    for root, dirnames, filenames in os.walk('src'):
+        for filename in fnmatch.filter(filenames, '*.md'):
+                matches.append(os.path.join(root, filename))
+    for filename in matches:
+        print(filename)
+        print(change_extension(filename, 'html'))
+        with open(filename) as f:
+            print(f.read())
 
-print 'working!'
 
-with open('tools/generate_notes.py', 'r') as source:
-    print source.read()
+def change_extension(filename, new_extension):
+    return filename
 
-print ''
-print ''
-print ''
-print ''
-
-for filename in glob.iglob('src/notes/**', recursive=True):
-    print(filename)
+main()

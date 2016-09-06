@@ -33,17 +33,17 @@ def check_equal_a(a, b):
     for i, i_val in enumerate(a):
         for j, j_val in enumerate(i_val):
             if i >= len(b):
-                print '%s >= len %s (%s)' % (i, b, len(b))
-                print b[0]
-                print '%s does not match %s' % (a, b)
+                print('%s >= len %s (%s)' % (i, b, len(b)))
+                print(b[0])
+                print('%s does not match %s' % (a, b))
                 return False
             if j >= len(b[i]):
-                print '%s >= len %s (%s)' % (a, b[i], len(b[i]))
-                print '%s does not match %s' % (a, b)
+                print('%s >= len %s (%s)' % (a, b[i], len(b[i])))
+                print('%s does not match %s' % (a, b))
                 return False
             if j_val != b[i][j]:
-                print '%s does not equal %s' % (j_val, b[i][j])
-                print '%s does not equal %s' % (i_val, b[i])
+                print('%s does not equal %s' % (j_val, b[i][j]))
+                print('%s does not equal %s' % (i_val, b[i]))
                 return False
     return True
 

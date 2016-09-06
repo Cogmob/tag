@@ -1,0 +1,2 @@
+#!/bin/bash
+vimdiff .gen/src/python/module_tests/log/gen .gen/src/python/module_tests/log/target

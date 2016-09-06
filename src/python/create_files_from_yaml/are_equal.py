@@ -15,7 +15,7 @@ def are_equal_recursive(a, b):
     if isinstance(a, str):
         return a == b
 
-    for key, val in a.iteritems():
+    for key, val in a.items():
         if key not in b:
             return False
         if not are_equal_recursive(a[key], b[key]):

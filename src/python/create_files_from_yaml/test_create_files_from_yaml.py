@@ -26,8 +26,8 @@ def test_create_files_from_yaml(app_fs):
                 after = create_yaml_from_files(app_fs)
                 expect(are_equal(before, after)).to_equal(True)
         except:
-            print 'test failed in: test_create_files_from_yaml.py'
-            print 'test name: %s' % test_name
+            print('test failed in: test_create_files_from_yaml.py')
+            print('test name: %s' % test_name)
             raise
 
 def get_names(dirname):

@@ -6,7 +6,7 @@ import os
 
 import sqlite3
 from python.initialise_database.create_database_for_tests import get_database_in_memory
-from does_database_match_yaml import does_database_match_yaml
+from .does_database_match_yaml import does_database_match_yaml
 
 def test_does_database_match_yaml():
     dirname = os.path.dirname(os.path.abspath(__file__))
@@ -21,7 +21,7 @@ def test_does_database_match_yaml():
                         does_database_match_yaml(string=yaml.read(), conn=conn)
                             ).to_equal(True)
                 except:
-                    print 'test name: %s' % test_name
+                    print('test name: %s' % test_name)
                     raise
 
 def get_names(dirname):

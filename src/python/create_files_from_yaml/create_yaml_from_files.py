@@ -8,7 +8,7 @@ def create_dict_from_dir(fs):
         if fs.isdir(path):
             folders[path] = create_dict_from_dir(fs.opendir(path))
         else:
-            files[path] = fs.getcontents(path)
+            files[path] = fs.getcontents(path).decode('UTF-8')
     ret = {}
     if len(folders) > 0:
         ret['folders'] = folders
