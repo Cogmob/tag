@@ -1,12 +1,4 @@
 #!/bin/bash
 echo 'running selected tests'
-
-mkdir -p .gen
-rm -rf .gen/src
-cp -r src .gen/
-chmod -R a-x+X .gen/src/python
-for file in $(find .gen -name ".__init__.py")
-do
-    echo mv $file `echo $file | sed s/\\\\.__init__/__init__/` | sh
-done
+source tools/gen
 tools/.virtualenv/bin/nosetests --with-progressive .gen/src/python -a 's'
