@@ -19,14 +19,14 @@ def up():
 @s(up)
 def test_ls(app_fs):
     files = app_fs.listdir('tmp')
-    expect(files).to_equal(['example', '.tag', '.filtered'])
+    expect(set(files)).to_equal(set(['example', '.tag', '.filtered']))
 
 @s(up)
 def test_create_file(app_fs):
     files = app_fs.listdir('tmp')
-    expect(files).to_equal(['example', '.tag', '.filtered'])
+    expect(set(files)).to_equal(set(['example', '.tag', '.filtered']))
 
 @s(up)
 def test_create_several_files(app_fs):
     files = app_fs.listdir('tmp')
-    expect(files).to_equal(['example', '.tag', '.filtered'])
+    expect(set(files)).to_equal(set(['example', '.tag', '.filtered']))
