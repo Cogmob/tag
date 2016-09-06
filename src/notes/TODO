@@ -1,11 +1,11 @@
-###use cases
+#use cases
 • read directory names into database
 • read file names into database
 • add main view
 • add relationships between folders into database
 • add relationship between files and folders into database
 
-###project_to_do
+#project_to_do
 • create full use case for every possilbe command
 • create functionality to read file system into database (2 abstract views)
 • create functionality to detect changes to abstract file system
