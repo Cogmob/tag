@@ -1,0 +1,16 @@
+# known issues
+. crash if set active then fire
+. fix assert for credit deltas
+    . add method to NpcCrewComponent for getting crew cut percentage
+    . multiply by this value in all relevant places    
+
+# confirm
+. avatars are being created and removed at the correct times in the crew lounge
+
+# tag
+. add bullet points instead of >.space
+. make sure that indents work
+
+# low priority
+. chase up on powerplay assert
+. incorrect xml for MaleCrew buildbot error
