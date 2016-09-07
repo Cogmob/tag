@@ -1,5 +1,7 @@
 # known issues
+. preload images before entering crew lounge
 . crash if set active then fire
+. crash if fire two people in succession
 . fix assert for credit deltas
     . add method to NpcCrewComponent for getting crew cut percentage
     . multiply by this value in all relevant places    
@@ -8,8 +10,7 @@
 . avatars are being created and removed at the correct times in the crew lounge
 
 # tag
-. add bullet points instead of >.space
-. make sure that indents work
+. make sure the todo list is up to date
 
 # low priority
 . chase up on powerplay assert

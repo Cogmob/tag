@@ -1,9 +1,0 @@
-Added system to preload the crew portraits for the crew lounge (still to do to make them render as the game first loads, but atm after first visit to crew lounge they will be cached)
-Ensure that every person visible in the crew lounge has a distinct pose Added asserts to make sure that at no point does a crew member transition directly from 'flying in fighter / ship' to 'on shore leave'
-Removed typedef for NpcCrewPair (use NpcCrewMap::Value instead)
-Added assert in destructor of MemberData to make sure that the object has been cleaned up properly
-Added verification into the avatarconstraints class to give a more useful error message when the issue is that all the poses have been used up
-Only recreate information in the Crew Lounge when necessary (previously the
-Avatar pictures were all being recreated for example when a crew memeber was being set to active, in fact this only requires cached information to be resubmitted to the gui)
-
-ED-65481
