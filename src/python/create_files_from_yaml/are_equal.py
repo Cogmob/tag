@@ -1,5 +1,5 @@
 import json
-from python.module_tests.log_difference import log_difference
+from python.testing.log_difference import log_difference
 
 def are_equal(a, b, message=''):
     if are_equal_recursive(a, b) and are_equal_recursive(b, a):

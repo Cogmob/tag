@@ -1,7 +1,3 @@
 files: [[1, 'file name 1'], [2, 'file name 2']]
-views: [[1, 'view name 1'], [2, 'view name 2']]
 tags: [[1, 'tag name 1'], [2, 'tag name 2']]
 fileTags: [[1, 1], [2, 2]]
-viewFolders: [[1, 1, 'view folder name 1'], [2, 1, 'view folder name 2']]
-viewSubfolders: [[1, 1, 1], [2, 2, 2]]
-viewFolderContents: [[1, 1, 1], [2, 2, 2,]]

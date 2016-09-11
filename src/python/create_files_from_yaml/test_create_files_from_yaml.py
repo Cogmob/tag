@@ -1,5 +1,5 @@
 from compare import expect
-from python.module_tests.utils.with_setup_args import with_setup_args as s
+from python.testing.test_decorator import with_setup_args
 from nose.plugins.attrib import attr
 import unittest
 import os
@@ -11,10 +11,11 @@ from python.create_files_from_yaml.create_yaml_from_files import create_yaml_fro
 from python.create_files_from_yaml.are_equal import are_equal
 
 def up():
-    app_fs = fsopendir('mount://src/python/module_tests/data/fs.ini', create_dir=True)
+    app_fs = fsopendir('mount://src/python/testing/fs.ini', create_dir=True)
     return [app_fs.opendir('tmp')], {}
 
-@s(up)
+@attr('s')
+@with_setup_args(up)
 def test_create_files_from_yaml(app_fs):
     dirname = os.path.dirname(os.path.abspath(__file__))
     for test_name in get_names(dirname):

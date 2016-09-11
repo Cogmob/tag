@@ -1,5 +1,5 @@
 from compare import expect
-from .utils.with_setup_args import with_setup_args as s
+from python.testing.test_decorator import with_setup_args
 from nose.plugins.attrib import attr
 import unittest
 
@@ -15,7 +15,9 @@ def down(conn, cursor):
     cursor.close()
     conn.close()
 
-@s(up, down)
+decorator = with_setup_args(up, down)
+
+@decorator
 def test_creating_tables(conn, cursor):
     cursor.execute('create table tableA (id INTEGER PRIMARY KEY);')
     cursor.execute('create table tableB (id INTEGER PRIMARY KEY);')

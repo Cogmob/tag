@@ -51,7 +51,4 @@ def get_table_names():
     return [
         'files',
         'tags',
-        'fileTags',
-        'viewFolders',
-        'viewSubfolders',
-        'viewFolderContents']
+        'fileTags']
