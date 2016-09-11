@@ -13,7 +13,6 @@
 • create different types of abstract data file
 • work through each of the use cases
 
-a/b/c/d/e/1.txt
-b/c/d/f/1.txt
-
-
+#go from database + viewfile + concrete view to new view
+This algorithm needs to be very simple, to make reasoning about the other
+algorithms easier
