@@ -1,6 +1,6 @@
 view_files:
--   tags: [root]
-    files: "*"
+-   tags: root
+    files: []
     folders:
     -   four_lets
     -   two_legs

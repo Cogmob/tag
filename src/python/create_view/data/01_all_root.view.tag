@@ -1,5 +1,5 @@
 view_files:
--   tags: root
+-   tags: [root]
     files: "*"
     folders:
     foreach:
