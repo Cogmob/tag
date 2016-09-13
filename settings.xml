@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<settings>
+	<game expand="1" name="Elite Dangerous" select="1">
+		<DirectInput name="Direct Input" on="1"></DirectInput>
+		<Alt main="1" name="Main" select="1"></Alt></game>
+	<last game="Elite Dangerous"></last>
+</settings>
