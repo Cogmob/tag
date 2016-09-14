@@ -7,8 +7,8 @@ viewfiles:
     foreach:
         files: [files]
         folders:
-            green: [green]
             brown: [brown]
+            green: [green]
 -   tags: [four_legs]
     files: [file]
     folders:
@@ -17,3 +17,8 @@ viewfiles:
         files: []
         folders:
             fast: [fast]
+-   tags: [brown]
+    files: []
+    folders:
+        mammals: [mammal]
+        reptiles: [reptile]
