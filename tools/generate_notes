@@ -1,3 +1,4 @@
 #!/bin/bash
 source tools/gen
 tools/.virtualenv/bin/python3 tools/generate_notes.py
+cp .gen/src/notes/index.html public/index.html
