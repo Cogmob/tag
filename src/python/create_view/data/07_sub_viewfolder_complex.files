@@ -9,8 +9,10 @@ folders:
                         files: [2]
                     reptiles:
                         files: [4]
+                files: [view]
             green:
                 files: [3]
+        files: [view]
     less_than_four_legs:
         folders:
             brown:
@@ -19,5 +21,7 @@ folders:
                         files: [5 8]
                     reptiles:
                         files: [6 9]
+                files: [view]
             green:
                 files: [7 10]
+files: [view]
