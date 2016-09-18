@@ -10,17 +10,9 @@ from .create_view import create_view
 src_path = os.path.dirname(os.path.abspath(__file__))
 
 def each_create_view(data):
-    viewfile_filename = os.path.join(
-            data['root_path'],
-            data['local_filename'])
-    try:
-        print(data['local_filename'])
-        with open(viewfile_filename) as viewfile:
-            view_files = yaml.load(viewfile.read())['view_files']
-            res = create_view(view_files, example_files)
-    except:
-        print('failure: test name: %s' % data['local_filename'])
-        raise
+    with open(data['filename']) as viewfile:
+        view_files = yaml.load(viewfile.read())
+        res = create_view(view_files, example_files)
 
 def test_create_view():
     glob_runner(

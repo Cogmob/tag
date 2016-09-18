@@ -32,10 +32,15 @@ def glob_runner(
         filenames = filter_blacklist(black_list, filenames)
 
     for filename in filenames:
-        data = {
-                'root_path': root_path,
-                'local_filename': filename}
-        func(data)
+        try:
+            data = {
+                    'root_path': root_path,
+                    'local_filename': filename,
+                    'filename': os.path.join(root_path, filename)}
+            func(data)
+        except:
+            print('failure: test name: %s' % filename)
+            raise
 
 def filter_whitelist(white_list, filenames, ret=[]):
     if len(filenames) is 0:
