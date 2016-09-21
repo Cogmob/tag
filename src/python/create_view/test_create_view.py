@@ -10,9 +10,12 @@ from .create_view import create_view
 src_path = os.path.dirname(os.path.abspath(__file__))
 
 def each_create_view(data):
+    print(data)
     with open(data['filename']) as viewfile:
         view_files = yaml.load(viewfile.read())
         res = create_view(view_files, example_files)
+        with open(data['filename'].split('.view')[0] + '.files') as files:
+            expect(res).to_equal(yaml.load(files.read()))
 
 @attr('s')
 def test_create_view():
