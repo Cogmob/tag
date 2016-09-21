@@ -14,7 +14,6 @@ def up():
     app_fs = fsopendir('mount://src/python/testing/fs.ini', create_dir=True)
     return [app_fs.opendir('tmp')], {}
 
-@attr('s')
 @with_setup_args(up)
 def test_create_files_from_yaml(app_fs):
     dirname = os.path.dirname(os.path.abspath(__file__))

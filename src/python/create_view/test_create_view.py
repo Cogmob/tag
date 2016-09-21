@@ -14,6 +14,7 @@ def each_create_view(data):
         view_files = yaml.load(viewfile.read())
         res = create_view(view_files, example_files)
 
+@attr('s')
 def test_create_view():
     glob_runner(
         glob_array = [src_path, 'data', '[0-10]*.tag'],
