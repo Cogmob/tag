@@ -1,5 +1,4 @@
-files:
--   primary_tags: [1 four_legs]
+-   primary_tags: ['1', 'four_legs']
     secondary_tags: [mammal cat red_eyes]
 -   primary_tags: [2]
     secondary_tags: [four_legs brown mammal dog]
