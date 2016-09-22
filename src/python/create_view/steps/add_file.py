@@ -8,14 +8,16 @@ def add_file(i):
         return False, directory
 
     sub_folders_modified = False
-    new_sub_folders = []
-    for sub_directory in directory['folders']:
-        was_modified, new_sub_directory = add_file(sub_directory, file_tags)
+    new_sub_folders = {}
+    for key, sub_directory in directory['folders'].items():
+        was_modified, new_sub_directory = add_file({
+            'directory': sub_directory,
+            'file_tags': file_tags})
         if was_modified:
             if sub_folders_modified:
                 raise ValueError('file was sorted into multiple subfolders')
             sub_folders_modified = True
-        new_sub_folders.push(new_sub_directory)
+        new_sub_folders[key] = new_sub_directory
 
     if sub_folders_modified:
         directory['folders'] = new_sub_folders
