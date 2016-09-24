@@ -6,7 +6,7 @@
         no_legs: [no_legs]
     foreach:
         tags: []
-        files: [file]
+        files: []
         folders:
             mammals: [mammal]
             reptiles: [reptile]

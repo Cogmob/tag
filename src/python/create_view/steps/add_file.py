@@ -4,6 +4,9 @@ def add_file(i):
     directory = i['directory']
     file_tags = i['file_tags']
 
+    if not tags_allowed(directory['tags'], file_tags):
+        return False, directory
+
     sub_folders_modified = False
     new_sub_folders = {}
     for key, sub_directory in directory['folders'].items():
