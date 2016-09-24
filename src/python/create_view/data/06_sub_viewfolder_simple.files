@@ -2,12 +2,12 @@ folders:
     four_legs:
         folders:
             mammals:
-                files: [1 2]
+                files: ['1', '2']
             reptiles:
-                files: [3 4]
-        files: [view]
+                files: ['3', '4']
+        files: ['view']
     two_legs:
-        files: [5 6 7]
+        files: ['5', '6', '7']
     no_legs:
-        files: [8 9 10]
-files: [view]
+        files: ['8', '9', '10']
+files: ['view']

@@ -18,10 +18,10 @@ folders:
             brown:
                 folders:
                     mammals:
-                        files: [5 8]
+                        files: ['5', '8']
                     reptiles:
-                        files: [6 9]
+                        files: ['6', '9']
                 files: [view]
             green:
-                files: [7 10]
+                files: ['7', '10']
 files: [view]
