@@ -1,8 +1,11 @@
-from .implement_view_file import implement_view_file
+from python.create_view.other.implement_view_file import implement_view_file
 
 def create_root(view_files):
     return {
-        'directory': create_root_r(view_files),
+        'directory': {
+            'folders': {},
+            'files': {},
+            'tags': ['root']},
         'view_files': view_files}
 
 def create_root_r(view_files):

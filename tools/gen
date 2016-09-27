@@ -7,3 +7,4 @@ for file in $(find .gen -name ".__init__.py")
 do
     echo mv $file `echo $file | sed s/\\\\.__init__/__init__/` | sh
 done
+tools/.virtualenv/bin/python3 tools/modify_scripts.py

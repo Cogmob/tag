@@ -1,6 +1,5 @@
--   tags: [root]
-    files: [file]
+-   tags: [root file]
     folders:
         no_legs: [no_legs]
     foreach:
-        files: [/red_eyes]
+        tags: [/red_eyes]
