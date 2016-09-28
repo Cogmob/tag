@@ -22,7 +22,7 @@ def test_create_view():
         glob_array = [src_path, 'data', '[0-10]*.tag'],
         func = each_create_view,
         root_path_array = [src_path, 'data'],
-        white_list = ['06'])
+        white_list = ['07'])
 
 def get_example_files():
     with open(os.path.join(src_path, 'data', 'files')) as files:

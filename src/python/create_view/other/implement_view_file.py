@@ -14,8 +14,6 @@ def implement_view_file(
         directory['stored_files'] = []
     directory['stored_files'].append({'primary_tags': ['view']})
 
-    directory['tags'] += view_file['tags']
-
     if 'foreach' in view_file:
         for key, folder in view_file['folders'].items():
             directory['folders'][key] = implement_each(
