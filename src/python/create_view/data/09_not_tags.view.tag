@@ -1,5 +1,5 @@
--   tags: [file]
+-   tags: []
     folders:
         no_legs: [no_legs]
     foreach:
-        tags: [/red_eyes]
+        tags: ['and', ['not', 'red_eyes']]
