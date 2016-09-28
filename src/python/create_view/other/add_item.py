@@ -10,9 +10,12 @@ def add_item(i, add_func):
     sub_folders_modified = False
     new_sub_folders = {}
     for key, sub_directory in directory['folders'].items():
+        epr('key', 'green')
+        epr(key, 'green')
         was_modified, new_sub_directory = add_item({
             'directory': sub_directory,
             'file_tags': file_tags}, add_func)
+        epr(was_modified)
         if was_modified:
             if sub_folders_modified:
                 raise ValueError('file was sorted into multiple subfolders')
@@ -22,10 +25,6 @@ def add_item(i, add_func):
     if sub_folders_modified:
         directory['folders'] = new_sub_folders
     else:
-        if not tags_allowed(directory['files'], file_tags):
-            epr(directory['files'], 'red')
-            return False, directory
-
         directory = add_func(directory)
 
     return True, directory

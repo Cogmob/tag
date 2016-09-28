@@ -4,8 +4,8 @@ def create_root(view_files):
     return {
         'directory': {
             'folders': {},
-            'files': {},
-            'tags': ['root']},
+            'stored_files': [],
+            'tags': ['file']},
         'view_files': view_files}
 
 def create_root_r(view_files):

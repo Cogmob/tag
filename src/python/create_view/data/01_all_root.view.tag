@@ -1,3 +1,3 @@
--   tags: [root file]
+-   tags: []
     folders: {}
     foreach:

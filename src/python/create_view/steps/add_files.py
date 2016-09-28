@@ -7,6 +7,8 @@ def add_files(i):
 
     for file_tags in files:
         tags = file_tags['primary_tags'] + file_tags['secondary_tags']
+        tags.append('file')
+        tags.append('root')
         added, directory = add_item({
             'directory': directory,
             'file_tags': tags},

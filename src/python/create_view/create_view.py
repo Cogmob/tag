@@ -10,7 +10,6 @@ def create_view(view_files, example_files):
         view_files,
         create_root,
         add_view_files,
-        epr,
         add_data('files', example_files),
         add_files,
         simplify)

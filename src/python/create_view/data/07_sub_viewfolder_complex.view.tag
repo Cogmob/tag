@@ -1,4 +1,4 @@
--   tags: [root file]
+-   tags: []
     folders:
         four_legs: [four_legs]
         less_than_four_legs: [two_legs no_legs]
@@ -7,14 +7,14 @@
         folders:
             brown: [brown]
             green: [green]
--   tags: [four_legs file]
+-   tags: [four_legs]
     folders:
         red_eyes: [red_eyes]
     foreach:
         tags: []
         folders:
             fast: [fast]
--   tags: [brown]
+-   tags: [brown four_legs]
     folders:
         mammals: [mammal]
         reptiles: [reptile]

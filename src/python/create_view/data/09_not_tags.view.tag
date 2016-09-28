@@ -1,4 +1,4 @@
--   tags: [root file]
+-   tags: [file]
     folders:
         no_legs: [no_legs]
     foreach:
