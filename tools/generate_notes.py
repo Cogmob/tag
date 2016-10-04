@@ -13,7 +13,7 @@ def main():
     for filename in matches:
         call(['vim', '-c', 'set ft=txtfmt', '-c', 'TOhtml', '+wa', '+qa', filename])
         with open(filename + '.html') as f:
-            lines += ['<details>']
+            lines += ['<details open>']
             lines += [get_title_line(filename)]
             lines += format_lines(get_content(f.read()))
             lines += ['</details>']
