@@ -1,0 +1,72 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<title>~/tag/gen/src/notes/TODO.html</title>
+<meta name="Generator" content="Vim/7.4">
+<meta name="plugin-version" content="vim7.4_v2">
+<meta name="syntax" content="txtfmt">
+<meta name="settings" content="number_lines,use_css,no_foldcolumn,expand_tabs,line_ids,prevent_copy=">
+<meta name="colorscheme" content="solarized">
+<style type="text/css">
+<!--
+pre { font-family: monospace; color: #ffff00; background-color: #ffffff; }
+body { font-family: monospace; color: #ffff00; background-color: #ffffff; }
+* { font-size: 1em; }
+.LineNr { color: #00ffff; background-color: #c0c0c0; padding-bottom: 1px; }
+-->
+</style>
+
+<script type='text/javascript'>
+<!--
+
+/* function to open any folds containing a jumped-to line before jumping to it */
+function JumpToLine()
+{
+  var lineNum;
+  lineNum = window.location.hash;
+  lineNum = lineNum.substr(1); /* strip off '#' */
+
+  if (lineNum.indexOf('L') == -1) {
+    lineNum = 'L'+lineNum;
+  }
+  lineElem = document.getElementById(lineNum);
+  /* Always jump to new location even if the line was hidden inside a fold, or
+   * we corrected the raw number to a line ID.
+   */
+  if (lineElem) {
+    lineElem.scrollIntoView(true);
+  }
+  return true;
+}
+if ('onhashchange' in window) {
+  window.onhashchange = JumpToLine;
+}
+
+-->
+</script>
+</head>
+<body onload='JumpToLine();'>
+<pre id='vimCodeElement'>
+<span id="L1" class="LineNr"> 1 </span>#use cases
+<span id="L2" class="LineNr"> 2 </span>• read directory names into database
+<span id="L3" class="LineNr"> 3 </span>• read file names into database
+<span id="L4" class="LineNr"> 4 </span>• add main view
+<span id="L5" class="LineNr"> 5 </span>• add relationships between folders into database
+<span id="L6" class="LineNr"> 6 </span>• add relationship between files and folders into database
+<span id="L7" class="LineNr"> 7 </span>
+<span id="L8" class="LineNr"> 8 </span>#project_to_do
+<span id="L9" class="LineNr"> 9 </span>• create full use case for every possilbe command
+<span id="L10" class="LineNr">10 </span>• create functionality to read file system into database (2 abstract views)
+<span id="L11" class="LineNr">11 </span>• create functionality to detect changes to abstract file system
+<span id="L12" class="LineNr">12 </span>• create functionality to update in line with file system
+<span id="L13" class="LineNr">13 </span>• create different types of abstract data file
+<span id="L14" class="LineNr">14 </span>• work through each of the use cases
+<span id="L15" class="LineNr">15 </span>
+<span id="L16" class="LineNr">16 </span>#go from database + viewfile + concrete view to new view
+<span id="L17" class="LineNr">17 </span>This algorithm needs to be very simple, to make reasoning about the other
+<span id="L18" class="LineNr">18 </span>algorithms easier
+</pre>
+</body>
+</html>
+<!-- vim: set foldmethod=manual : -->
