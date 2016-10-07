@@ -1,0 +1,22 @@
+folders:
+    four_legs:
+        folders:
+            brown:
+                folders:
+                    mammals:
+                        files: ['2']
+                    reptiles:
+                        files: ['4']
+                files: [view]
+            green:
+                files: ['3']
+            red_eyes:
+                files: ['1']
+        files: [view]
+    less_than_four_legs:
+        folders:
+            brown:
+                files: ['5', '6', '8', '9']
+            green:
+                files: ['10', '7']
+files: [view]

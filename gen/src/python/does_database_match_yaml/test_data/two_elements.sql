@@ -1,0 +1,6 @@
+insert into files (name) values ('file name 1')
+insert into files (name) values ('file name 2')
+insert into tags (name) values ('tag name 1')
+insert into tags (name) values ('tag name 2')
+insert into fileTags (fileId, tagId) values (1, 1)
+insert into fileTags (fileId, tagId) values (2, 2)

@@ -1,0 +1,41 @@
+#example file system
+##example file system 2
+###example file system 3
+Build
+   Effects
+      Generated
+         Alpha_Additive_Unlit_FresnelMulColour_UVScroll.fx
+         Alpha_Additive_Unlit_FresnelMulColour_UVScroll.fxd
+         Alpha_Additive_Unlit_FresnelMulColour_UVScroll.Win64.opt
+         Alpha_Additive_Unlit_FresnelMulColour_UVScroll.xfxd
+         BackgroundStars.fx
+         BackgroundStars.fxd
+         BackgroundStars.Win64.opt
+         BackgroundStars.xfxd
+      FragmentCompiler.effects
+      FragmentCompiler.log
+      GlobalInclude.fx
+Source
+   Lib
+      Rock
+         _Initialise.cpp
+         _Initialise.h
+         _Rock.cpp
+         Jamfile.jam
+
+#to tags algorithm
+two sets are not subsets if
+    for each a, b (a in A, a not in B, b in B, b not in A)
+
+files = list of sets of tags (1 set to begin)
+
+recursively bisect sets until all contain 1 element
+
+bisect =
+    take next new tag from first path m
+    check if any others do \nt have
+    of set of tags that do not have, first element is n
+    try to find element in n not in m
+    if found, do bisection of set
+    if not, try new n
+    if not, try new m

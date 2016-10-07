@@ -6,7 +6,7 @@ def main():
     lines = get_start()
 
     matches = []
-    for root, dirnames, filenames in os.walk('.gen/src/notes'):
+    for root, dirnames, filenames in os.walk('gen/src/notes'):
         for filename in fnmatch.filter(filenames, '*'):
                 matches.append(os.path.join(root, filename))
 
@@ -21,7 +21,7 @@ def main():
     lines += ['</body>']
     lines += ['</html>']
 
-    with open('.gen/src/notes/index.html', 'w+') as f:
+    with open('gen/src/notes/index.html', 'w+') as f:
         f.write('\n'.join(lines))
 
 def format_lines(lines):

@@ -1,4 +1,4 @@
 #!/bin/bash
 echo 'running all tests'
 source tools/gen
-tools/.virtualenv/bin/nosetests --with-progressive .gen/src/python
+tools/.virtualenv/bin/nosetests --with-progressive gen/src/python

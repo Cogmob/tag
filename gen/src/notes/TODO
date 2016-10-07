@@ -1,0 +1,18 @@
+#use cases
+• read directory names into database
+• read file names into database
+• add main view
+• add relationships between folders into database
+• add relationship between files and folders into database
+
+#project_to_do
+• create full use case for every possilbe command
+• create functionality to read file system into database (2 abstract views)
+• create functionality to detect changes to abstract file system
+• create functionality to update in line with file system
+• create different types of abstract data file
+• work through each of the use cases
+
+#go from database + viewfile + concrete view to new view
+This algorithm needs to be very simple, to make reasoning about the other
+algorithms easier

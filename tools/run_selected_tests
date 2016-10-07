@@ -1,4 +1,4 @@
 #!/bin/bash
 echo 'running selected tests'
 source tools/gen
-tools/.virtualenv/bin/nosetests --with-progressive .gen/src/python -a 's'
+tools/.virtualenv/bin/nosetests --with-progressive gen/src/python -a 's'
