@@ -1,0 +1,3 @@
+#!/bin/bash
+echo 'running selected tests'
+gen/tools/virtualenv/bin/nosetests --with-progressive gen/src/python -a 's'

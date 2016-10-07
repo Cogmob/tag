@@ -47,7 +47,7 @@ def find_line_number(lines, target, start=0):
     raise ValueError('target string not found')
 
 def get_start():
-    with open('tools/start.html', 'r') as f:
+    with open('src/tools/start.html', 'r') as f:
         return f.read().split('\n')
     raise IOError('start.html file missing')
 
