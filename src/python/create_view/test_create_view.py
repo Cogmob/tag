@@ -12,7 +12,10 @@ src_path = os.path.dirname(os.path.abspath(__file__))
 def each_create_view(data):
     with open(data['filename']) as viewfile:
         view_files = yaml.load(viewfile.read())
-        res = create_view(view_files, example_files)
+        try:
+            res = create_view(view_files, example_files)
+        except e:
+            res = str(e)
         with open(data['filename'].split('.view')[0] + '.files') as files:
             expect(res).to_equal(yaml.load(files.read()))
 

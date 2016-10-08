@@ -6,4 +6,4 @@
     pip install virtualenv
 
     cd ~/tag  
-    ./tools/create_virtualenv
+    ./src/tools/create_virtualenv
