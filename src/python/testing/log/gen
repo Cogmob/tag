@@ -1,0 +1,25 @@
+messagegen:
+Traceback (most recent call last):
+  File "/home/lavery/tag/gen/src/python/create_view/test_create_view.py", line 25, in each_create_view
+    res = create_view(view_files, example_files)
+  File "/home/lavery/tag/gen/src/python/create_view/create_view.py", line 15, in create_view
+    simplify)
+  File "/home/lavery/tag/gen/tools/virtualenv/lib/python3.4/site-packages/simplads/simplad_bundle/pipe.py", line 6, in pipe
+    return SimpladBundle().unit(first).pipe(lifted)
+  File "/home/lavery/tag/gen/tools/virtualenv/lib/python3.4/site-packages/simplads/simplad_bundle/simplad_bundle.py", line 40, in pipe
+    self.sm, bind_args = SimpladMonad.bind(func)((self.sm, bind_args))
+  File "/home/lavery/tag/gen/tools/virtualenv/lib/python3.4/site-packages/simplads/simplad_monad/simplad_monad.py", line 110, in ret
+    return sm, compose(functions)(bound_before)
+  File "/home/lavery/tag/gen/tools/virtualenv/lib/python3.4/site-packages/simplads/simplad_monad/simplad_monad.py", line 86, in f
+    res = func(unboxed.bound)
+  File "/home/lavery/tag/gen/tools/virtualenv/lib/python3.4/site-packages/simplads/simplad_bundle/lift.py", line 4, in <lambda>
+    return lambda i: SimpladResult(val=func(i), delta_map={})
+  File "/home/lavery/tag/gen/src/python/create_view/steps/add_files.py", line 15, in add_files
+    get_add_file_func(file_tags))
+  File "/home/lavery/tag/src/python/create_view/other/add_item.py", line 15, in add_item
+    'file_tags': file_tags}, add_func)
+  File "/home/lavery/tag/src/python/create_view/other/add_item.py", line 25, in add_item
+    directory = add_func(directory)
+  File "/home/lavery/tag/src/python/create_view/other/get_add_file_func.py", line 3, in f
+    epr(file_tags)
+NameError: name 'epr' is not defined

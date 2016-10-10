@@ -5,7 +5,7 @@ def add_item(i, add_func):
     file_tags = i['file_tags']
 
     if not tags_allowed(directory['tags'], file_tags):
-        return False, directory
+        return 'item did not match and was not added', directory
 
     sub_folders_modified = False
     new_sub_folders = {}
@@ -15,7 +15,7 @@ def add_item(i, add_func):
             'file_tags': file_tags}, add_func)
         if was_modified:
             if sub_folders_modified:
-                raise ValueError('file was sorted into multiple subfolders')
+                'item matched multiple locations and was not added', directory
             sub_folders_modified = True
         new_sub_folders[key] = new_sub_directory
 
@@ -24,4 +24,4 @@ def add_item(i, add_func):
     else:
         directory = add_func(directory)
 
-    return True, directory
+    return 'item was added', directory

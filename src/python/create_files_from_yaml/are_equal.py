@@ -1,11 +1,11 @@
 import json
-from python.testing.log_difference import log_difference
+from python.testing.log_differences import log_differences
 
 def are_equal(a, b, message=''):
     if are_equal_recursive(a, b) and are_equal_recursive(b, a):
         return True
     else:
-        log_difference(
+        log_differences(
                 json.dumps(a, indent=4, sort_keys=True),
                 json.dumps(b, indent=4, sort_keys=True),
                 message=message)

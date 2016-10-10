@@ -1,3 +1,6 @@
 #!/bin/bash
 echo 'running all tests'
+rm -rf gen/src
+cp -r src gen
+gen/tools/virtualenv/bin/python3 src/tools/modify_scripts.py
 gen/tools/virtualenv/bin/nosetests --with-progressive gen/src/python
