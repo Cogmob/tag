@@ -21,5 +21,4 @@ def tags_allowed_r(tags, file_tags):
     if instruction == 'not':
         return not tags_allowed_r(tags[1:], file_tags)
 
-    epr(tags, 'red')
     raise ValueError('tags is not a string and does not contain an instruction')

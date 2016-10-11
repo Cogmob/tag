@@ -5,7 +5,8 @@ def add_item(i, add_func):
     file_tags = i['file_tags']
 
     if not tags_allowed(directory['tags'], file_tags):
-        return 'item did not match and was not added', directory
+        t = 'item did not match and was not added\ntags: %s\nfile tags:%s'
+        return t.format(directory['tags'], file_tags), directory
 
     sub_folders_modified = False
     new_sub_folders = {}
@@ -13,7 +14,7 @@ def add_item(i, add_func):
         was_modified, new_sub_directory = add_item({
             'directory': sub_directory,
             'file_tags': file_tags}, add_func)
-        if was_modified:
+        if was_modified == 'item was added':
             if sub_folders_modified:
                 'item matched multiple locations and was not added', directory
             sub_folders_modified = True
@@ -21,7 +22,9 @@ def add_item(i, add_func):
 
     if sub_folders_modified:
         directory['folders'] = new_sub_folders
+        epr('a', 'green')
     else:
         directory = add_func(directory)
+        epr('b', 'blue')
 
     return 'item was added', directory
