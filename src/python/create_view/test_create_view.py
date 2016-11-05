@@ -1,7 +1,8 @@
-from compare import expect
 from nose.plugins.attrib import attr
+from python.testing.log_differences import expect
 import unittest
 
+import traceback
 import yaml
 import os
 from python.testing.glob_runner import glob_runner
@@ -22,10 +23,18 @@ def each_create_view(data):
         view_files = yaml.load(viewfile.read())
         try:
             res = create_view(view_files, example_files)
+<<<<<<< HEAD
         except Exception as e:
             res = str(e)
+=======
+        except Exception as ex:
+            res = ''.join(
+                    traceback.format_exception(
+                        etype=type(ex),value=ex,tb=ex.__traceback__))
+>>>>>>> 91aeb195db7618d3a190eab50d6657a754984229
         with open(data['filename'].split('.view')[0] + '.files') as files:
-            expect(res).to_equal(yaml.load(files.read()))
+            m = data['filename']
+            expect(res).to_equal(yaml.load(files.read()), m)
 
 def get_example_files():
     with open(os.path.join(src_path, 'data', 'files')) as files:

@@ -1,5 +1,10 @@
 #!/bin/bash
 echo 'running selected tests'
 rm -rf gen/src
+<<<<<<< HEAD
 cp -r src gen/src
+=======
+cp -r src gen
+gen/tools/virtualenv/bin/python3 src/tools/modify_scripts.py
+>>>>>>> 91aeb195db7618d3a190eab50d6657a754984229
 gen/tools/virtualenv/bin/nosetests --with-progressive gen/src/python -a 's'

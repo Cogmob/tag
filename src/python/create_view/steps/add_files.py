@@ -13,6 +13,6 @@ def add_files(i):
             'directory': directory,
             'file_tags': tags},
             get_add_file_func(file_tags))
-        if not added:
-            raise ValueError('file was not added')
+        if added != 'item was added':
+            raise ValueError(added)
     return directory
