@@ -1,4 +1,3 @@
-from epr import epr
 from .or_tags_allowed import or_tags_allowed
 from .and_tags_allowed import and_tags_allowed
 

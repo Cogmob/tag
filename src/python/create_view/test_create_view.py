@@ -9,18 +9,20 @@ from .create_view import create_view
 
 src_path = os.path.dirname(os.path.abspath(__file__))
 
+@attr('s')
 def test_create_view():
     glob_runner(
         glob_array = [src_path, 'data', '[0-10]*.tag'],
         func = each_create_view,
-        root_path_array = [src_path, 'data'])
+        root_path_array = [src_path, 'data'],
+        white_list = ['02'])
 
 def each_create_view(data):
     with open(data['filename']) as viewfile:
         view_files = yaml.load(viewfile.read())
         try:
             res = create_view(view_files, example_files)
-        except e:
+        except Exception as e:
             res = str(e)
         with open(data['filename'].split('.view')[0] + '.files') as files:
             expect(res).to_equal(yaml.load(files.read()))
